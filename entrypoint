@@ -1,0 +1,16 @@
+cd server
+if [ -a /home/minecraft/startup.sh ]
+  if [ -x /home/minecraft/startup.sh ]
+    ../startup.sh
+    exit
+  else
+    echo "startup.sh is not executable"
+  end
+end
+
+if [ -a /home/minecraft/server.jar ]
+  java $* -jar ../server.jar
+else
+  echo "server.jar doesn't exist !"
+  echo "exiting"
+end
