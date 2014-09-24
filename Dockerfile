@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER vivi7865 <me@vivi7865.com>
 
-RUN apt-get update && apt-get install openjdk7 && apt-get clean
+RUN apt-get update && apt-get install openjdk-7-jre  && apt-get clean
 
 RUN useradd -m minecraft -u 1000
 
