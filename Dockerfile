@@ -4,8 +4,9 @@ MAINTAINER vivi7865 <me@vivi7865.com>
 
 RUN useradd -m minecraft -u 1000
 
-RUN mkdir /home/minecraft/
-RUN chown minecraft:minecraft /home/minecraft/
+RUN mkdir /home/minecraft/server/
+RUN chown minecraft:minecraft /home/minecraft/server/
+ADD assets /home/minecraft/assets/
 WORKDIR /home/minecraft/
 
 EXPOSE 25565
