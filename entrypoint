@@ -1,17 +1,22 @@
+#!/bin/bash
+
 cd server
-if [ -a /home/minecraft/startup.sh ]
-  if [ -x /home/minecraft/startup.sh ]
+if [ -a /home/minecraft/startup.sh ] 
+then
+  if [ -x /home/minecraft/startup.sh ] 
+  then
     ../startup.sh
     exit 1
   else
     echo "startup.sh is not executable"
-  end
-end
+  fi
+fi
 
-if [ -a /home/minecraft/server.jar ]
+if [ -a /home/minecraft/server.jar ] 
+then
   java $* -jar ../server.jar ${MC_ARGS}
 else
   echo "server.jar doesn't exist !"
   echo "exiting"
   exit 1
-end
+fi
