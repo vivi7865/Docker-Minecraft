@@ -14,7 +14,7 @@ fi
 
 if [ -a /home/minecraft/server.jar ] 
 then
-  java $* -jar ../server.jar ${MC_ARGS}
+  java $* -jar ../server.jar
 else
   echo "server.jar doesn't exist !"
   echo "exiting"
