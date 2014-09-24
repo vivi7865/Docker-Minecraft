@@ -9,7 +9,7 @@ if [ -a /home/minecraft/startup.sh ]
 end
 
 if [ -a /home/minecraft/server.jar ]
-  java $* -jar ../server.jar
+  java $* -jar ../server.jar ${MC_ARGS}
 else
   echo "server.jar doesn't exist !"
   echo "exiting"
