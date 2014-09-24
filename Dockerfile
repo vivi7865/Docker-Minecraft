@@ -8,10 +8,10 @@ RUN useradd -m minecraft -u 1000
 
 RUN mkdir /home/minecraft/server/
 RUN chown minecraft:minecraft /home/minecraft/server/
-ADD entrypoint /home/minecraft/entrypoint
-RUN chmod +x /home/minecraft/entrypoint
+ADD entrypoint /usr/sbin/entrypoint
+RUN chmod +x /usr/sbin/entrypoint
 WORKDIR /home/minecraft/
 
 EXPOSE 25565
 USER 1000
-ENTRYPOINT ./entrypoint
+ENTRYPOINT entrypoint
