@@ -3,7 +3,7 @@ cd /minecraft
 
 if [ ! -e server.jar ]; then
   echo "Downloading $SOFTWARE ..."
-  wget -o $SERVER_JAR -q $DOWNLOAD_URL
+  wget -O $SERVER_JAR $DOWNLOAD_URL
 fi
 
 if [ ! -e server.properties ]; then
