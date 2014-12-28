@@ -16,6 +16,8 @@ EXPOSE 25565
 
 ADD start.sh /start
 ADD start-minecraft.sh /start-minecraft
+RUN chmod +x /start-minecraft
+RUN chmod +x /start
 
 USER minecraft
 VOLUME ['/minecraft']
