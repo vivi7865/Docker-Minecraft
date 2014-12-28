@@ -27,5 +27,6 @@ WORKDIR /minecraft
 CMD [ "/start-minecraft" ]
 
 ENV JVM_OPTS -Xmx2048M -Xms1024M
+ENV SERVER_JAR server.jar
 ENV SOFTWARE vanilla
-ENV DOWNLOADS_URL https://s3.amazonaws.com/Minecraft.Download/versions/1.8.1/minecraft_server.1.8.1.jar
+ENV DOWNLOAD_URL https://s3.amazonaws.com/Minecraft.Download/versions/1.8.1/minecraft_server.1.8.1.jar
