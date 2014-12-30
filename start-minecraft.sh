@@ -1,9 +1,9 @@
 #!/bin/sh
 cd /minecraft
 
-if [ ! -e server.jar ]; then
+if [ ! -e $SERVER_JAR ]; then
   echo "Downloading $SOFTWARE ..."
-  wget -O $SERVER_JAR $DOWNLOAD_URL
+  wget -O "$SERVER_JAR" -q "$DOWNLOAD_URL"
 fi
 
 if [ ! -e server.properties ]; then
