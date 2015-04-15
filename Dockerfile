@@ -3,7 +3,7 @@ FROM itzg/ubuntu-openjdk-7
 MAINTAINER vivi7865 <me@vivi7865.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get install -y wget libmozjs-24-bin imagemagick && apt-get clean
+RUN apt-get update && apt-get install -y wget libmozjs-24-bin imagemagick && apt-get clean
 RUN update-alternatives --install /usr/bin/js js /usr/bin/js24 100
 
 RUN wget -O /usr/bin/jsawk https://github.com/micha/jsawk/raw/master/jsawk
@@ -19,7 +19,7 @@ ADD start-minecraft.sh /start-minecraft
 RUN chmod +x /start-minecraft
 RUN chmod +x /start
 
-USER minecraft
+#USER minecraft
 VOLUME ['/minecraft']
 ADD server.properties /tmp/server.properties
 WORKDIR /minecraft
